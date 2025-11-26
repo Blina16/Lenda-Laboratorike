@@ -27,5 +27,4 @@ Unlock Your Best Study Self.          </p>
     </>
   );
 }
-
 export default App;
