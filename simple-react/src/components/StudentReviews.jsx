@@ -38,12 +38,15 @@ export default function StudentReviews() {
                 <div className="mt-3">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <span key={i} style={{ fontSize: 20 }}>⭐</span>
+                    
                   ))}
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+<StudentReviews />
 
       </div>
     </section>

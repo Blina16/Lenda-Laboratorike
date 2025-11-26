@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 import "./components/theme.css";
 import StudentReviews from "./components/StudentReviews";
+// eslint-disable-next-line no-unused-vars
+import TutorsList from "./components/TutorsList";
 
 function App() {
   return (
