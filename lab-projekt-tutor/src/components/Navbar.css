@@ -28,10 +28,11 @@
   margin: 0;
 }
 
-/* Desktop navigation */
+/* Desktop nav links */
 .nav-links {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -45,7 +46,23 @@
   color: #1e90ff;
 }
 
-/* Mobile button */
+/* Sign Up button */
+.signup-btn {
+  padding: 0.5rem 1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #187bcd;
+}
+
+/* Mobile menu button */
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -74,7 +91,14 @@
   color: #1e90ff;
 }
 
-/* Responsive Styles */
+.mobile-dropdown .signup-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -82,5 +106,16 @@
 
   .mobile-menu-btn {
     display: block;
+  }
+}
+
+/* Prevent content being hidden behind navbar */
+body {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
   }
 }
