@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Menu, X } from "lucide-react";
+import "./components/Navbar.css";
 
-function App() {
+export default function Navbar() {
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="navbar-container">
+      <div className="navbar-inner">
+        <h1 className="logo">Tutor4Kids</h1>
+
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#courses">Courses</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button className="mobile-menu-btn" onClick={() => setOpen(!open)}>
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="mobile-dropdown">
+          <a href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setOpen(false)}>About</a>
+          <a href="#courses" onClick={() => setOpen(false)}>Courses</a>
+          <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+        </div>
+      )}
+    </header>
   );
 }
 
-export default App;
+/* Add this file as Navbar.css in the same folder */
